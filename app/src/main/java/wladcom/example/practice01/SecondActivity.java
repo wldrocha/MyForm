@@ -81,7 +81,7 @@ public class SecondActivity extends AppCompatActivity {
         btnNextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int option
+                int option;
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
