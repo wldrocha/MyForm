@@ -20,19 +20,23 @@
             android:id="@+id/editTextName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:cursorVisible="false"
             android:hint="Your name is?"
- />
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
 
         <Button
             android:id="@+id/buttonNextActivity"
-            android:layout_width="395dp"
-            android:layout_height="82dp"
+            android:layout_width="376dp"
+            android:layout_height="64dp"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="208dp"
-            android:layout_marginBottom="6dp"
-            android:text="Next" />
+            android:layout_marginBottom="-3dp"
+            android:background="@color/colorAccent"
+            android:text="Next Step"
+            android:textColor="#fff" />
+
 
     </RelativeLayout>
 
