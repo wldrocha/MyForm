@@ -7,13 +7,33 @@
     tools:context=".ThirdActivity">
 
     <Button
-        android:id="@+id/buttonShare"
-        android:layout_width="423dp"
-        android:layout_height="68dp"
+        android:id="@+id/buttonConfirm"
+        android:layout_width="376dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/textViewAge"
         android:layout_alignParentBottom="true"
         android:background="@color/colorAccent"
-        android:text="Share"
+        android:text="Confirm"
         android:textColor="#fff"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="541dp" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="376dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorAccent"
+        android:text="Next Step"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
