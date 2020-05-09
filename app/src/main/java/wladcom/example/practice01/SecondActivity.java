@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class SecondActivity extends AppCompatActivity {
 
     private String name = "";
-    private int age = 0;
+    private int age = 16;
     private TextView textViewAge;
     private Button btnNextView;
     private RadioButton radioButtonGreeter;
@@ -81,13 +81,18 @@ public class SecondActivity extends AppCompatActivity {
         btnNextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int option
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
 
-                int option = (radioButtonGreeter.isChecked()) ? GREETER_OPTION : FAREWELL_OPTION;
-                intent.putExtra("option", option);
-                startActivity(intent);
+                if(radioButtonFarewell.isChecked() || radioButtonGreeter){
+                    option = (radioButtonGreeter.isChecked()) ? GREETER_OPTION : FAREWELL_OPTION;
+                    intent.putExtra("option", option);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(SecondActivity.this, "Select option Farewell or greeter", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
