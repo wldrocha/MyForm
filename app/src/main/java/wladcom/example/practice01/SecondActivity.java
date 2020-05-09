@@ -86,7 +86,7 @@ public class SecondActivity extends AppCompatActivity {
                 intent.putExtra("name", name);
                 intent.putExtra("age", age);
 
-                if(radioButtonFarewell.isChecked() || radioButtonGreeter){
+                if(radioButtonFarewell.isChecked() || radioButtonGreeter.isChecked()){
                     option = (radioButtonGreeter.isChecked()) ? GREETER_OPTION : FAREWELL_OPTION;
                     intent.putExtra("option", option);
                     startActivity(intent);
